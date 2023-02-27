@@ -1,0 +1,24 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    font-family: 'Roboto', sans-serif;
+}
+div{
+    position: relative;
+    box-sizing: border-box  ;
+}
+input.my-custom-input{
+    box-sizing: border-box;
+    width: 100%;
+    border: none;
+    border-bottom: 2px solid rgb(142, 142, 142);
+    outline: none;
+    font-size: 20px;
+    &:focus{
+        border-bottom: 2px solid $color-custom-my-input;
+    }
+}

@@ -1,0 +1,22 @@
+$color-system:#000cf9;
+$color-system-two:rgb(142, 142, 142);
+
+$color-custom-my-input: $color-system;
+
+
+
+
+$theme-colors: (
+  "primary":    #0d6efd,
+  "secondary":  #6c757d,
+  "success":    #198754,
+  "info":       #0dcaf0,
+  "warning":    #ffc107,
+  "danger":     #dc3545,
+  "light":      #f8f9fa,
+  "dark":       #212529,
+  "red":    #dc3545,
+  'blue': #0d6efd,
+  'pink':#d63384,
+  'system': $color-system
+);

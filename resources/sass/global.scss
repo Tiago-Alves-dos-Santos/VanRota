@@ -11,6 +11,9 @@ div{
     position: relative;
     box-sizing: border-box  ;
 }
+.pointer{
+    cursor: pointer;
+}
 input.my-custom-input{
     box-sizing: border-box;
     width: 100%;
@@ -21,4 +24,8 @@ input.my-custom-input{
     &:focus{
         border-bottom: 2px solid $color-custom-my-input;
     }
+}
+
+input.my-custom-input.invalid{
+    border-bottom: 2px solid red;
 }

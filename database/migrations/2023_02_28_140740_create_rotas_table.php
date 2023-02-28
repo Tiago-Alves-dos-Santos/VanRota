@@ -15,7 +15,11 @@ class CreateRotasTable extends Migration
     {
         Schema::create('rotas', function (Blueprint $table) {
             $table->id();
+            $table->string('nome');
+            $table->string('origem');
+            $table->string('destino');
             $table->timestamps();
+            $table->softDeletes($column = 'deleted_at', $precision = 0);
         });
     }
 

@@ -15,7 +15,18 @@ class CreateEmpresasTable extends Migration
     {
         Schema::create('empresas', function (Blueprint $table) {
             $table->id();
+            $table->string('name');
+            $table->string('company_picture')->nullable();
+            $table->string('cep', 8);
+            $table->string('estado');
+            $table->string('cidade');
+            $table->string('rua');
+            $table->string('bairro');
+            $table->int('numero');
+            $table->text('complemento')->nullable();
+            $table->boolean('active')->default(true);
             $table->timestamps();
+            $table->softDeletes($column = 'deleted_at', $precision = 0);
         });
     }
 

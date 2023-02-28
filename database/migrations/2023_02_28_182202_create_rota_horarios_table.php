@@ -4,7 +4,7 @@ use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
-class CreatePercursoRotasTable extends Migration
+class CreateRotaHorariosTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,14 +13,12 @@ class CreatePercursoRotasTable extends Migration
      */
     public function up()
     {
-        Schema::create('percurso_rotas', function (Blueprint $table) {
+        Schema::create('rota_horarios', function (Blueprint $table) {
             $table->id();
-            $table->bigInteger('rota_id')->unsigned()->nullable();
-            $table->string('nome_parada');
-            $table->time('horario_chegada')->nullable();
+            $table->time('hora_partida');
+            $table->time('hora_chegada');
             $table->timestamps();
             $table->softDeletes($column = 'deleted_at', $precision = 0);
-            $table->foreign('rota_id')->references('id')->on('rotas');
         });
     }
 
@@ -31,6 +29,6 @@ class CreatePercursoRotasTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('percurso_rotas');
+        Schema::dropIfExists('rota_horarios');
     }
 }

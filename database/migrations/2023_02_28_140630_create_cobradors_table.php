@@ -15,7 +15,6 @@ class CreateCobradorsTable extends Migration
     {
         Schema::create('cobradores', function (Blueprint $table) {
             $table->id();
-            $table->id();
             $table->string('name');
             $table->string('email')->unique();
             $table->string('email_recovery')->unique();
@@ -26,7 +25,7 @@ class CreateCobradorsTable extends Migration
             $table->string('cidade');
             $table->string('rua');
             $table->string('bairro');
-            $table->int('numero');
+            $table->integer('numero');
             $table->text('complemento')->nullable();
             $table->boolean('active')->default(true);
             $table->rememberToken();
@@ -42,6 +41,6 @@ class CreateCobradorsTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('cobradors');
+        Schema::dropIfExists('cobradores');
     }
 }

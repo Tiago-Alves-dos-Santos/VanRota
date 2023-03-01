@@ -15,7 +15,18 @@ class CreateHistoricoRotasTable extends Migration
     {
         Schema::create('historico_rotas', function (Blueprint $table) {
             $table->id();
+            $table->bigInteger('rota_id')->unsigned();
+            $table->bigInteger('transporte_id')->unsigned();
+            $table->bigInteger('motorista_id')->unsigned();
+            $table->bigInteger('cobrador_id')->unsigned();
+            $table->time('hora_inicio_rota');
+            $table->string('hora_fim_rota');
             $table->timestamps();
+            $table->softDeletes($column = 'deleted_at', $precision = 0);
+            $table->foreign('rota_id')->references('id')->on('rotas');
+            $table->foreign('transporte_id')->references('id')->on('transportes');
+            $table->foreign('motorista_id')->references('id')->on('motoristas');
+            $table->foreign('cobrador_id')->references('id')->on('cobradores');
         });
     }
 

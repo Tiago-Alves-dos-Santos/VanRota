@@ -22,11 +22,14 @@ class CreateEmpresasTable extends Migration
             $table->string('cidade');
             $table->string('rua');
             $table->string('bairro');
-            $table->int('numero');
+            $table->integer('numero');
             $table->text('complemento')->nullable();
+            $table->date('mensalidade_data');
+            $table->double('valor_mensalidade',8,2);
+            $table->enum('mensalidade_status',['paga','pendente','vencida'])->nullable();
             $table->boolean('active')->default(true);
             $table->timestamps();
-            $table->softDeletes($column = 'deleted_at', $precision = 0);
+            $table->softDeletes($column = 'deleted_at');
         });
     }
 

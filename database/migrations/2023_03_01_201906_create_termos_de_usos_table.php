@@ -4,7 +4,7 @@ use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
-class CreateAnunciosTable extends Migration
+class CreateTermosDeUsosTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,14 +13,9 @@ class CreateAnunciosTable extends Migration
      */
     public function up()
     {
-        Schema::create('anuncios', function (Blueprint $table) {
+        Schema::create('termos_de_usos', function (Blueprint $table) {
             $table->id();
-            $table->string('foto')->nullable();
-            $table->string('video')->nullable();
-            $table->string('url_externa')->nullable();
-            $table->date('inicar_dia');
-            $table->date('finalizar_dia');
-            $table->double('valor_diaria', 8,2);
+            $table->string('arquivo');
             $table->timestamps();
             $table->softDeletes($column = 'deleted_at', $precision = 0);
         });
@@ -33,6 +28,6 @@ class CreateAnunciosTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('anuncios');
+        Schema::dropIfExists('termos_de_usos');
     }
 }

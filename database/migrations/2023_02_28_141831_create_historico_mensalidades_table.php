@@ -15,7 +15,14 @@ class CreateHistoricoMensalidadesTable extends Migration
     {
         Schema::create('historico_mensalidades', function (Blueprint $table) {
             $table->id();
+            $table->bigInteger('empresa_id')->unsigned();
+            $table->date('mensalidade_data');
+            $table->date('pago_dia')->nullable();
+            $table->double('valor_pago',8,2)->nullable();
+            $table->enum('mensalidade_status',['paga','pendente','vencida'])->nullable();
             $table->timestamps();
+            $table->softDeletes($column = 'deleted_at', $precision = 0);
+            $table->foreign('empresa_id')->references('id')->on('empresas');
         });
     }
 

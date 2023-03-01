@@ -25,7 +25,7 @@ class CreateMotoristasTable extends Migration
             $table->string('cidade');
             $table->string('rua');
             $table->string('bairro');
-            $table->int('numero');
+            $table->integer('numero');
             $table->text('complemento')->nullable();
             $table->boolean('active')->default(true);
             $table->rememberToken();

@@ -15,7 +15,12 @@ class CreatePercursoRotasTable extends Migration
     {
         Schema::create('percurso_rotas', function (Blueprint $table) {
             $table->id();
+            $table->bigInteger('rota_id')->unsigned()->nullable();
+            $table->string('nome_parada');
+            $table->time('horario_chegada')->nullable();
             $table->timestamps();
+            $table->softDeletes($column = 'deleted_at', $precision = 0);
+            $table->foreign('rota_id')->references('id')->on('rotas');
         });
     }
 

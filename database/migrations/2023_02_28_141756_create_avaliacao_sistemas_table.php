@@ -15,7 +15,13 @@ class CreateAvaliacaoSistemasTable extends Migration
     {
         Schema::create('avaliacao_sistemas', function (Blueprint $table) {
             $table->id();
+            $table->bigInteger('cliente_avaliador_id')->unsigned();
+            $table->string('versao');
+            $table->double('nota', 3,1);;
+            $table->text('feedback')->nullable();
             $table->timestamps();
+            $table->softDeletes($column = 'deleted_at', $precision = 0);
+            $table->foreign('cliente_avaliador_id')->references('id')->on('clientes');
         });
     }
 

@@ -14,7 +14,7 @@
     <div id="page-login">
         <div class="fundo"></div>
         <div class="container-form">
-            @livewire('login-form')
+            @livewire('login-form', ['tipo' => $tipo])
         </div>
     </div>
 </body>

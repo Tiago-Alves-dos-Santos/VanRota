@@ -1,6 +1,25 @@
 <div class="livewire-login-form">
     {{-- Knowing others is intelligence; knowing yourself is true wisdom. --}}
-    <form action="">
+        @switch($tipo)
+            @case('cliente')
+            <form wire:submit.prevent="loginCliente" method="POST">
+                @break
+            @case('vr-motorista')
+            <form wire:submit.prevent="loginMotorista" method="POST">
+                @break
+            @case('vr-cobrador')
+            <form wire:submit.prevent="loginCobrador" method="POST">
+                @break
+            @case('vr-dono')
+            <form wire:submit.prevent="loginDono" method="POST">
+                @break
+            @case('devsoft')
+            <form wire:submit.prevent="loginDeveloper" method="POST">
+                @break
+            @default
+
+        @endswitch
+        @csrf
         <div class="row">
             <div class="col-md-12 d-flex justify-content-center">
                 <h1>
@@ -15,7 +34,26 @@
         </div>
         <div class="row mb-3">
             <div class="col-md-12 d-flex justify-content-center">
-                <h4>Motorista</h4>
+                @switch($tipo)
+                    @case('cliente')
+                        <h4>Motorista</h4>
+                        @break
+                    @case('vr-motorista')
+                        <h4>Motorista</h4>
+                        @break
+                    @case('vr-cobrador')
+                        <h4>Cobrador</h4>
+                        @break
+                    @case('vr-dono')
+                        <h4>Dono</h4>
+                        @break
+                    @case('devsoft')
+                        <h4>Desenvolvedor</h4>
+                        @break
+
+                    @default
+                    <h4 class="text-danger">Erro tipo login não definido</h4>
+                @endswitch
             </div>
         </div>
         <div class="row">

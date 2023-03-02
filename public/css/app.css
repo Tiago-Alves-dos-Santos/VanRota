@@ -1,12 +1,87 @@
 @import url(https://fonts.googleapis.com/css2?family=Roboto:wght@100;
 
 300;400&display=swap);@charset "UTF-8";
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Roboto", sans-serif;
+  overflow-x: hidden;
+}
+
+div {
+  position: relative;
+  box-sizing: border-box;
+}
+
+.pointer {
+  cursor: pointer;
+}
+
+div#page-login {
+  position: absolute;
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  height: 100%;
+}
+
+div#page-login div.fundo {
+  position: absolute;
+  width: calc(100% - 500px);
+  left: 0;
+  height: 100%;
+  background-color: #211033;
+  background-image: url(/images/empresa.png?3dfcfb4d266fd0b9c25ca9cfb1b43992);
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+div#page-login div.container-form {
+  position: absolute;
+  width: 500px;
+  height: 100%;
+  right: 0;
+}
+
+div#page-login div.container-form div.livewire-login-form {
+  padding: 10px 15px;
+}
+
+div#page-login div.container-form div.livewire-login-form img {
+  width: 190px;
+  height: 190px;
+  border-radius: 100%;
+  border: 3.5px solid #211033;
+}
+
+div#page-login div.container-form div.livewire-login-form button.btn-login {
+  background-color: #47226d;
+  color: white;
+}
+
+div#page-login div.container-form div.livewire-login-form button.btn-login:hover {
+  background-color: #211033;
+}
+
+div#page-login div.container-form div.livewire-login-form a.login-social {
+  color: #3b5998;
+  text-decoration: none;
+}
+
+div#page-login div.container-form div.livewire-login-form a.login-social i {
+  font-size: 45px;
+}
 
 /*!
  * Bootstrap  v5.3.0-alpha1 (https://getbootstrap.com/)
  * Copyright 2011-2022 The Bootstrap Authors
  * Licensed under MIT (https://github.com/twbs/bootstrap/blob/main/LICENSE)
  */
+
 :root,
 [data-bs-theme=light] {
   --bs-blue: #0d6efd;
@@ -43,7 +118,7 @@
   --bs-red: #dc3545;
   --bs-blue: #0d6efd;
   --bs-pink: #d63384;
-  --bs-system: #000cf9;
+  --bs-login-theme: #211033;
   --bs-primary-rgb: 13, 110, 253;
   --bs-secondary-rgb: 108, 117, 125;
   --bs-success-rgb: 25, 135, 84;
@@ -55,7 +130,7 @@
   --bs-red-rgb: 220, 53, 69;
   --bs-blue-rgb: 13, 110, 253;
   --bs-pink-rgb: 214, 51, 132;
-  --bs-system-rgb: 0, 12, 249;
+  --bs-login-theme-rgb: 33, 16, 51;
   --bs-primary-text: #0a58ca;
   --bs-secondary-text: #6c757d;
   --bs-success-text: #146c43;
@@ -2711,8 +2786,8 @@ textarea.form-control-lg {
 }
 
 .form-check-input:checked {
-  background-color: #0d6efd;
-  border-color: #0d6efd;
+  background-color: #211033;
+  border-color: #211033;
 }
 
 .form-check-input:checked[type=checkbox] {
@@ -3617,21 +3692,21 @@ fieldset:disabled .btn {
   --bs-btn-disabled-border-color: #d63384;
 }
 
-.btn-system {
+.btn-login-theme {
   --bs-btn-color: #fff;
-  --bs-btn-bg: #000cf9;
-  --bs-btn-border-color: #000cf9;
+  --bs-btn-bg: #211033;
+  --bs-btn-border-color: #211033;
   --bs-btn-hover-color: #fff;
-  --bs-btn-hover-bg: #000ad4;
-  --bs-btn-hover-border-color: #000ac7;
-  --bs-btn-focus-shadow-rgb: 38, 48, 250;
+  --bs-btn-hover-bg: #1c0e2b;
+  --bs-btn-hover-border-color: #1a0d29;
+  --bs-btn-focus-shadow-rgb: 66, 52, 82;
   --bs-btn-active-color: #fff;
-  --bs-btn-active-bg: #000ac7;
-  --bs-btn-active-border-color: #0009bb;
+  --bs-btn-active-bg: #1a0d29;
+  --bs-btn-active-border-color: #190c26;
   --bs-btn-active-shadow: inset 0 3px 5px rgba(0, 0, 0, 0.125);
   --bs-btn-disabled-color: #fff;
-  --bs-btn-disabled-bg: #000cf9;
-  --bs-btn-disabled-border-color: #000cf9;
+  --bs-btn-disabled-bg: #211033;
+  --bs-btn-disabled-border-color: #211033;
 }
 
 .btn-outline-primary {
@@ -3821,20 +3896,20 @@ fieldset:disabled .btn {
   --bs-gradient: none;
 }
 
-.btn-outline-system {
-  --bs-btn-color: #000cf9;
-  --bs-btn-border-color: #000cf9;
+.btn-outline-login-theme {
+  --bs-btn-color: #211033;
+  --bs-btn-border-color: #211033;
   --bs-btn-hover-color: #fff;
-  --bs-btn-hover-bg: #000cf9;
-  --bs-btn-hover-border-color: #000cf9;
-  --bs-btn-focus-shadow-rgb: 0, 12, 249;
+  --bs-btn-hover-bg: #211033;
+  --bs-btn-hover-border-color: #211033;
+  --bs-btn-focus-shadow-rgb: 33, 16, 51;
   --bs-btn-active-color: #fff;
-  --bs-btn-active-bg: #000cf9;
-  --bs-btn-active-border-color: #000cf9;
+  --bs-btn-active-bg: #211033;
+  --bs-btn-active-border-color: #211033;
   --bs-btn-active-shadow: inset 0 3px 5px rgba(0, 0, 0, 0.125);
-  --bs-btn-disabled-color: #000cf9;
+  --bs-btn-disabled-color: #211033;
   --bs-btn-disabled-bg: transparent;
-  --bs-btn-disabled-border-color: #000cf9;
+  --bs-btn-disabled-border-color: #211033;
   --bs-gradient: none;
 }
 
@@ -5669,11 +5744,11 @@ fieldset:disabled .btn {
   --bs-alert-link-color: var(--bs-pink-text);
 }
 
-.alert-system {
-  --bs-alert-color: var(--bs-system-text);
-  --bs-alert-bg: var(--bs-system-bg-subtle);
-  --bs-alert-border-color: var(--bs-system-border-subtle);
-  --bs-alert-link-color: var(--bs-system-text);
+.alert-login-theme {
+  --bs-alert-color: var(--bs-login-theme-text);
+  --bs-alert-bg: var(--bs-login-theme-bg-subtle);
+  --bs-alert-border-color: var(--bs-login-theme-border-subtle);
+  --bs-alert-link-color: var(--bs-login-theme-text);
 }
 
 @keyframes progress-bar-stripes {
@@ -6226,22 +6301,22 @@ fieldset:disabled .btn {
   --bs-list-group-active-border-color: var(--bs-pink-text);
 }
 
-.list-group-item-system {
-  --bs-list-group-color: var(--bs-system-text);
-  --bs-list-group-bg: var(--bs-system-bg-subtle);
-  --bs-list-group-border-color: var(--bs-system-border-subtle);
+.list-group-item-login-theme {
+  --bs-list-group-color: var(--bs-login-theme-text);
+  --bs-list-group-bg: var(--bs-login-theme-bg-subtle);
+  --bs-list-group-border-color: var(--bs-login-theme-border-subtle);
 }
 
-.list-group-item-system.list-group-item-action:hover,
-.list-group-item-system.list-group-item-action:focus {
+.list-group-item-login-theme.list-group-item-action:hover,
+.list-group-item-login-theme.list-group-item-action:focus {
   --bs-list-group-action-hover-color: var(--bs-emphasis-color);
-  --bs-list-group-action-hover-bg: var(--bs-system-border-subtle);
+  --bs-list-group-action-hover-bg: var(--bs-login-theme-border-subtle);
 }
 
-.list-group-item-system.list-group-item-action:active {
+.list-group-item-login-theme.list-group-item-action:active {
   --bs-list-group-active-color: var(--bs-emphasis-color);
-  --bs-list-group-active-bg: var(--bs-system-text);
-  --bs-list-group-active-border-color: var(--bs-system-text);
+  --bs-list-group-active-bg: var(--bs-login-theme-text);
+  --bs-list-group-active-border-color: var(--bs-login-theme-text);
 }
 
 .btn-close {
@@ -8064,9 +8139,9 @@ fieldset:disabled .btn {
   background-color: RGBA(214, 51, 132, var(--bs-bg-opacity, 1)) !important;
 }
 
-.text-bg-system {
+.text-bg-login-theme {
   color: #fff !important;
-  background-color: RGBA(0, 12, 249, var(--bs-bg-opacity, 1)) !important;
+  background-color: RGBA(33, 16, 51, var(--bs-bg-opacity, 1)) !important;
 }
 
 .link-primary {
@@ -8168,13 +8243,13 @@ fieldset:disabled .btn {
   color: #ab296a !important;
 }
 
-.link-system {
-  color: #000cf9 !important;
+.link-login-theme {
+  color: #211033 !important;
 }
 
-.link-system:hover,
-.link-system:focus {
-  color: #000ac7 !important;
+.link-login-theme:hover,
+.link-login-theme:focus {
+  color: #1a0d29 !important;
 }
 
 .ratio {
@@ -8722,9 +8797,9 @@ fieldset:disabled .btn {
   border-color: rgba(var(--bs-pink-rgb), var(--bs-border-opacity)) !important;
 }
 
-.border-system {
+.border-login-theme {
   --bs-border-opacity: 1;
-  border-color: rgba(var(--bs-system-rgb), var(--bs-border-opacity)) !important;
+  border-color: rgba(var(--bs-login-theme-rgb), var(--bs-border-opacity)) !important;
 }
 
 .border-white {
@@ -9696,9 +9771,9 @@ fieldset:disabled .btn {
   color: rgba(var(--bs-pink-rgb), var(--bs-text-opacity)) !important;
 }
 
-.text-system {
+.text-login-theme {
   --bs-text-opacity: 1;
-  color: rgba(var(--bs-system-rgb), var(--bs-text-opacity)) !important;
+  color: rgba(var(--bs-login-theme-rgb), var(--bs-text-opacity)) !important;
 }
 
 .text-black {
@@ -9854,9 +9929,9 @@ fieldset:disabled .btn {
   background-color: rgba(var(--bs-pink-rgb), var(--bs-bg-opacity)) !important;
 }
 
-.bg-system {
+.bg-login-theme {
   --bs-bg-opacity: 1;
-  background-color: rgba(var(--bs-system-rgb), var(--bs-bg-opacity)) !important;
+  background-color: rgba(var(--bs-login-theme-rgb), var(--bs-bg-opacity)) !important;
 }
 
 .bg-black {
@@ -13933,90 +14008,5 @@ fieldset:disabled .btn {
   .d-print-none {
     display: none !important;
   }
-}
-
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
-
-body {
-  font-family: "Roboto", sans-serif;
-}
-
-div {
-  position: relative;
-  box-sizing: border-box;
-}
-
-.pointer {
-  cursor: pointer;
-}
-
-input.my-custom-input {
-  box-sizing: border-box;
-  width: 100%;
-  border: none;
-  border-bottom: 2px solid rgb(142, 142, 142);
-  outline: none;
-  font-size: 20px;
-}
-
-input.my-custom-input:focus {
-  border-bottom: 2px solid #000cf9;
-}
-
-input.my-custom-input.invalid {
-  border-bottom: 2px solid red;
-}
-
-div#page-login {
-  position: absolute;
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-  width: 100%;
-  height: 100%;
-}
-
-div#page-login div.livewire-login-form {
-  padding: 0 10px;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  width: 400px;
-}
-
-div#page-login div.livewire-login-form img {
-  width: 200px;
-  height: 200px;
-}
-
-div#page-login div.livewire-login-form button.login-btn {
-  box-sizing: border-box;
-  width: 100%;
-  padding: 10px 5px 5px 5px;
-  border: none;
-  background-color: #b4b4b4;
-  border-radius: 30px;
-  box-shadow: 2px 2px 5px 3px #b4b4b4;
-}
-
-div#page-login div.livewire-login-form button.login-btn:hover {
-  color: white;
-  background-color: #000cf9;
-  box-shadow: 2px 2px 5px 3px #474fff;
-}
-
-div#page-login div.livewire-login-form button.login-btn-blue {
-  color: white;
-  background-color: #000cf9;
-  box-shadow: 2px 2px 5px 3px #000cf9;
-  box-sizing: border-box;
-  width: 100%;
-  padding: 15px 5px 5px 5px;
-  border: none;
-  border-radius: 30px;
 }
 

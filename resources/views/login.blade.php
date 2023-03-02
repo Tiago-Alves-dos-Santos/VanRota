@@ -6,14 +6,16 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>VanRota</title>
     <link rel="stylesheet" href="{{ mix('css/app.css') }}">
+    <script src="https://code.jquery.com/jquery-3.6.3.min.js"></script>
     <script src="https://kit.fontawesome.com/4ecb736ddb.js" crossorigin="anonymous"></script>
-    @livewireStyles()
+
 </head>
 <body>
     <div id="page-login">
-        @livewire('login-form')
+        <div class="fundo"></div>
+        <div class="container-form">
+            @livewire('login-form')
+        </div>
     </div>
-    @livewireScripts()
-    <script src="{{ mix('js/app.js') }}"></script>
 </body>
 </html>

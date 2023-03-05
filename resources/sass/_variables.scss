@@ -1,11 +1,4 @@
-$color-system:#000cf9;
-$color-system-two:rgb(142, 142, 142);
-
-$color-custom-my-input: $color-system;
-
-
-
-
+$cor-login-theme:#211033;
 $theme-colors: (
   "primary":    #0d6efd,
   "secondary":  #6c757d,
@@ -18,5 +11,5 @@ $theme-colors: (
   "red":    #dc3545,
   'blue': #0d6efd,
   'pink':#d63384,
-  'system': $color-system
+  'login-theme':$cor-login-theme
 );

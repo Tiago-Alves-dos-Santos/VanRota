@@ -40,7 +40,22 @@ return [
             'driver' => 'session',
             'provider' => 'users',
         ],
-
+        'cliente' => [
+            'driver' => 'session',
+            'provider' => 'clientes',
+        ],
+        'motorista' => [
+            'driver' => 'session',
+            'provider' => 'motoristas',
+        ],
+        'cobrador' => [
+            'driver' => 'session',
+            'provider' => 'cobradores',
+        ],
+        'dono' => [
+            'driver' => 'session',
+            'provider' => 'donos',
+        ],
         'api' => [
             'driver' => 'token',
             'provider' => 'users',
@@ -69,6 +84,22 @@ return [
         'users' => [
             'driver' => 'eloquent',
             'model' => App\Models\User::class,
+        ],
+        'clientes' => [
+            'driver' => 'eloquent',
+            'model' => App\Models\Cliente::class,
+        ],
+        'motoristas' => [
+            'driver' => 'eloquent',
+            'model' => App\Models\Motorista::class,
+        ],
+        'cobradores' => [
+            'driver' => 'eloquent',
+            'model' => App\Models\Cobrador::class,
+        ],
+        'donos' => [
+            'driver' => 'eloquent',
+            'model' => App\Models\DonoEmpresa::class,
         ],
 
         // 'users' => [

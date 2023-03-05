@@ -26,6 +26,8 @@ class CreateEmpresasTable extends Migration
             $table->text('complemento')->nullable();
             $table->date('mensalidade_data');
             $table->double('valor_mensalidade',8,2);
+            //para isso ser true necessario ter ceterza que tem internet na estrada
+            $table->boolean('mostrar_rota_atual')->default(false);
             $table->enum('mensalidade_status',['paga','pendente','vencida'])->nullable();
             $table->boolean('active')->default(true);
             $table->timestamps();

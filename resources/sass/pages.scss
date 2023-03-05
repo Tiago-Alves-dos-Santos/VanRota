@@ -1,45 +1,63 @@
 //***************************************LOGIN****************************************
+$container-form-width: 500px;
+$form-check-input-checked-bg-color: $cor-login-theme;
+$form-check-input-checked-border-color:   $form-check-input-checked-bg-color;
 div#page-login{
     position: absolute;
     display: flex;
     flex-direction: row;
-    justify-content: center;
     width: 100%;
     height: 100%;
-    div.livewire-login-form{
-        padding: 0 10px;
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        width: 400px;
-        img{
-            width: 200px;
-            height: 200px;
-        }
-        button.login-btn{
-            box-sizing: border-box;
-            width: 100%;
-            padding: 10px 5px 5px 5px;
-            border:none;
-            background-color: lighten($color-system-two, 15%);
-            border-radius: 30px;
-            box-shadow: 2px 2px 5px 3px lighten($color-system-two, 15%);
-            &:hover{
+    div.fundo{
+        position: absolute;
+        width: calc(100% - $container-form-width);
+        left: 0;
+        height: 100%;
+        background-color: $cor-login-theme;
+        background-image: url('../../public/img/empresa.png');
+        background-repeat: no-repeat;
+        background-position: center;
+    }
+    div.container-form{
+        position: absolute;
+        width: $container-form-width;
+        height: 100%;
+        right: 0;
+        div.livewire-login-form{
+            padding: 10px 15px;
+            img{
+                width: 190px;
+                height: 190px;
+                border-radius: 100%;
+                border: 3.5px solid $cor-login-theme;
+            }
+            button.btn-login{
+                background-color: lighten($cor-login-theme, 15%);
                 color: white;
-                background-color: $color-system;
-                box-shadow: 2px 2px 5px 3px lighten($color-system, 15%);
+                &:hover{
+                    background-color: $cor-login-theme;
+                }
+
+            }
+            a.login-social{
+                color: #3b5998;
+                text-decoration: none;
+                i{
+                    font-size: 45px;
+                }
             }
         }
-        button.login-btn-blue{
-            color: white;
-            background-color: $color-system;
-            box-shadow: 2px 2px 5px 3px $color-system;
-            box-sizing: border-box;
-            width: 100%;
-            padding: 15px 5px 5px 5px;
-            border:none;
-            border-radius: 30px;
-
-        }
     }
+
+    @media (max-width: 754px) {
+        div.fundo{
+            display: none;
+        }
+        div.container-form{
+            width: 100%;
+        }
+   }
+
 }
+
+

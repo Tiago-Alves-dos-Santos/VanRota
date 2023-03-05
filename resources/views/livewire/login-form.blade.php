@@ -36,7 +36,8 @@
             <div class="col-md-12 d-flex justify-content-center">
                 @switch($tipo)
                     @case('cliente')
-                        <h4>Motorista</h4>
+                        {{-- Colocar nome do cliente aq --}}
+                        <h4></h4>
                         @break
                     @case('vr-motorista')
                         <h4>Motorista</h4>
@@ -92,6 +93,7 @@
                 </button>
             </div>
         </div>
+        @if ($tipo == 'cliente')
         <div class="row mt-4">
             <div class="col-md-12 d-flex justify-content-center flex-column align-items-center">
                 <h6>Ou entre com:</h6>
@@ -100,5 +102,6 @@
                 </a>
             </div>
         </div>
+        @endif
     </form>
 </div>

@@ -48,6 +48,16 @@ div#page-login{
             }
         }
     }
+
+    @media (max-width: 754px) {
+        div.fundo{
+            display: none;
+        }
+        div.container-form{
+            width: 100%;
+        }
+   }
+
 }
 
 

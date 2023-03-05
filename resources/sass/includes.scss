@@ -1,0 +1,64 @@
+/***********************************************MYSIDEBAR*******************************************************/
+$sidebar-width:270px;
+div.mysidebar{
+    position: absolute;
+    width: $sidebar-width;
+    height: 100%;
+    background-color: white;
+    div.container-divider{
+        width: 100%;
+        padding: 0 10px;
+        margin: 5px 0;
+        div.divider{
+            width: 100%;
+            height: 2px;
+            background-color: $sidebar-divider-color;
+            padding: 0px 10px;
+        }
+    }
+
+    div.titulo{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+    div.links{
+        display: flex;
+        flex-direction: column;
+        a{
+            position: relative;
+            display: block;
+            width: 100%;
+            text-decoration: none;
+            color: $sidebar-link-color;
+            font-size: 22px;
+            padding: 10px 10px;
+            &:hover{
+                color: darken($sidebar-link-color, 15%);
+            }
+            i{
+                margin-right: 10px;
+            }
+        }
+        a.active{
+            color:$sidebar-link-active-color;
+        }
+        a.active::after{
+            border-right: 17px solid #f4f3ef;
+            border-top: 17px solid transparent;
+            border-bottom: 17px solid transparent;
+            content: "";
+            display: inline-block;
+            position: absolute;
+            right: -1px;
+            top: 8px;
+        }
+        div.sublink{
+            font-size: 22px;
+            div.sublink-links{
+                display: none;
+            }
+        }
+    }
+}

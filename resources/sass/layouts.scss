@@ -1,0 +1,8 @@
+/************************************************LAYOUT SIDEBAR**************************************************/
+div.content-sidebar{
+    position: absolute;
+    right: 0;
+    width: calc(100% - $sidebar-width);
+    height: 100%;
+    border: 1px solid red;
+}

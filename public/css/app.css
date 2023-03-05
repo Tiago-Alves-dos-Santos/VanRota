@@ -21,6 +21,91 @@ div {
   cursor: pointer;
 }
 
+/***********************************************MYSIDEBAR*******************************************************/
+
+div.mysidebar {
+  position: absolute;
+  width: 270px;
+  height: 100%;
+  background-color: white;
+}
+
+div.mysidebar div.container-divider {
+  width: 100%;
+  padding: 0 10px;
+  margin: 5px 0;
+}
+
+div.mysidebar div.container-divider div.divider {
+  width: 100%;
+  height: 2px;
+  background-color: #D1CFCD;
+  padding: 0px 10px;
+}
+
+div.mysidebar div.titulo {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+div.mysidebar div.links {
+  display: flex;
+  flex-direction: column;
+}
+
+div.mysidebar div.links a {
+  position: relative;
+  display: block;
+  width: 100%;
+  text-decoration: none;
+  color: #94918D;
+  font-size: 22px;
+  padding: 10px 10px;
+}
+
+div.mysidebar div.links a:hover {
+  color: #6e6b67;
+}
+
+div.mysidebar div.links a i {
+  margin-right: 10px;
+}
+
+div.mysidebar div.links a.active {
+  color: #EB5E28;
+}
+
+div.mysidebar div.links a.active::after {
+  border-right: 17px solid #f4f3ef;
+  border-top: 17px solid transparent;
+  border-bottom: 17px solid transparent;
+  content: "";
+  display: inline-block;
+  position: absolute;
+  right: -1px;
+  top: 8px;
+}
+
+div.mysidebar div.links div.sublink {
+  font-size: 22px;
+}
+
+div.mysidebar div.links div.sublink div.sublink-links {
+  display: none;
+}
+
+/************************************************LAYOUT SIDEBAR**************************************************/
+
+div.content-sidebar {
+  position: absolute;
+  right: 0;
+  width: calc(100% - 270px);
+  height: 100%;
+  border: 1px solid red;
+}
+
 div#page-login {
   position: absolute;
   display: flex;

@@ -10,6 +10,7 @@
 body {
   font-family: "Roboto", sans-serif;
   overflow-x: hidden;
+  height: 4450px;
 }
 
 div {
@@ -23,11 +24,51 @@ div {
 
 /***********************************************MYSIDEBAR*******************************************************/
 
+@keyframes sidebar_entrance {
+  0% {
+    left: -270px;
+  }
+
+  100% {
+    left: 0;
+  }
+}
+
+@keyframes sidebar_exit {
+  0% {
+    left: 0;
+  }
+
+  100% {
+    left: -270px;
+  }
+}
+
 div.mysidebar {
   position: absolute;
   width: 270px;
   height: 100%;
   background-color: white;
+}
+
+div.mysidebar.sidebar-entrada {
+  animation-name: sidebar_entrance;
+  /*nome da animação*/
+  animation-direction: normal;
+  animation-duration: 0.5s;
+  animation-timing-function: ease-in;
+  animation-iteration-count: 1;
+  animation-fill-mode: forwards;
+}
+
+div.mysidebar.sidebar-saida {
+  animation-name: sidebar_exit;
+  /*nome da animação*/
+  animation-direction: normal;
+  animation-duration: 0.5s;
+  animation-timing-function: ease-in;
+  animation-iteration-count: 1;
+  animation-fill-mode: forwards;
 }
 
 div.mysidebar div.container-divider {
@@ -92,11 +133,49 @@ div.mysidebar div.links div.sublink {
   font-size: 22px;
 }
 
+div.mysidebar div.links div.sublink div.sublink-title {
+  display: flex;
+  justify-content: space-between;
+  cursor: pointer;
+}
+
+div.mysidebar div.links div.sublink div.sublink-title span {
+  margin-left: 10px;
+}
+
+div.mysidebar div.links div.sublink div.sublink-title i {
+  margin-right: 10px;
+  transform: rotate(90deg);
+}
+
 div.mysidebar div.links div.sublink div.sublink-links {
-  display: none;
+  margin: 0 10px;
+  background-color: #F4F3EF;
+  display: flex;
+  flex-direction: column;
 }
 
 /************************************************LAYOUT SIDEBAR**************************************************/
+
+@keyframes container_sidebar_entrance {
+  0% {
+    width: 100%;
+  }
+
+  100% {
+    width: calc(100% - 270px);
+  }
+}
+
+@keyframes container_sidebar_exit {
+  0% {
+    width: calc(100% - 270px);
+  }
+
+  100% {
+    width: 100%;
+  }
+}
 
 div.content-sidebar {
   position: absolute;
@@ -104,6 +183,24 @@ div.content-sidebar {
   width: calc(100% - 270px);
   height: 100%;
   border: 1px solid red;
+}
+
+div.content-sidebar.container-sidebar-entrada {
+  animation-name: container_sidebar_entrance;
+  animation-direction: normal;
+  animation-duration: 0.5s;
+  animation-timing-function: ease-in;
+  animation-iteration-count: 1;
+  animation-fill-mode: forwards;
+}
+
+div.content-sidebar.container-sidebar-saida {
+  animation-name: container_sidebar_exit;
+  animation-direction: normal;
+  animation-duration: 0.5s;
+  animation-timing-function: ease-in;
+  animation-iteration-count: 1;
+  animation-fill-mode: forwards;
 }
 
 div#page-login {

@@ -1,10 +1,43 @@
 /***********************************************MYSIDEBAR*******************************************************/
 $sidebar-width:270px;
+@keyframes sidebar_entrance{
+    0%{
+        left: $sidebar-width * (-1);
+    }
+    100%{
+        left: 0;
+    }
+}
+@keyframes sidebar_exit{
+    0%{
+        left: 0;
+    }
+    100%{
+        left: $sidebar-width * (-1);
+    }
+}
+
 div.mysidebar{
     position: absolute;
     width: $sidebar-width;
     height: 100%;
     background-color: white;
+    &.sidebar-entrada{
+        animation-name: sidebar_entrance;/*nome da animação*/
+        animation-direction: normal;
+        animation-duration: $sidebar-animation-time;
+        animation-timing-function: ease-in;
+        animation-iteration-count: 1;
+        animation-fill-mode: forwards;
+    }
+    &.sidebar-saida{
+        animation-name: sidebar_exit;/*nome da animação*/
+        animation-direction: normal;
+        animation-duration: $sidebar-animation-time;
+        animation-timing-function: ease-in;
+        animation-iteration-count: 1;
+        animation-fill-mode: forwards;
+    }
     div.container-divider{
         width: 100%;
         padding: 0 10px;
@@ -56,8 +89,24 @@ div.mysidebar{
         }
         div.sublink{
             font-size: 22px;
+            div.sublink-title{
+                display: flex;
+                justify-content: space-between;
+                cursor: pointer;
+                span{
+                    margin-left: 10px;
+                }
+                i{
+                    margin-right: 10px;
+                    transform: rotate(90deg);
+                }
+            }
+
             div.sublink-links{
-                display: none;
+                margin: 0 10px;
+                background-color: #F4F3EF;
+                display: flex;
+                flex-direction: column;
             }
         }
     }

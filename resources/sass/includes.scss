@@ -110,3 +110,25 @@ div.mysidebar{
         }
     }
 }
+/***********************************************MY NAVBAR*******************************************************/
+div.mynavbar{
+    position: relative;
+    width: 100%;
+    background-color: white;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 10px 5px;
+    div.control-sidebar{
+        cursor: pointer;
+        i{
+            font-size: 30px;
+        }
+    }
+    div.titulo{
+        top: 5px;
+    }
+    div.nav-configuracoes{
+
+    }
+}

@@ -58,6 +58,7 @@
         //variaveis globais
         let mysidebar = $("#mysidebar-geral");
         let container_body = $("#content-sidebar");
+        let toggle_sidebar = $("#toggle-sidebar");
         //functions-events
         function verfiyWindow(event = true){
             let breakpoint = 1000;
@@ -85,6 +86,7 @@
             $(container_body).addClass('container-sidebar-entrada');
             $(mysidebar).removeClass('sidebar-saida');
             $(mysidebar).addClass('sidebar-entrada');
+            $(toggle_sidebar).html('<i class="fa-solid fa-xmark"></i>');
             $(mysidebar).data('show','visivel');
         }
         function sidebarNaoVisivel(){
@@ -92,10 +94,11 @@
             $(container_body).addClass('container-sidebar-saida');
             $(mysidebar).removeClass('sidebar-entrada');
             $(mysidebar).addClass('sidebar-saida');
+            $(toggle_sidebar).html('<i class="fa-solid fa-bars"></i>');
             $(mysidebar).data('show','nao-visivel');
         }
         function toggleSidebar(){
-            $("#toggle-sidebar").on('click', function(e){
+            $(toggle_sidebar).on('click', function(e){
                 let visivel = $(mysidebar).data('show') == 'visivel' ? true:false;
                 if(visivel){//visivel
                     sidebarNaoVisivel();

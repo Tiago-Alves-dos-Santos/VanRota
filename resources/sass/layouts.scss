@@ -20,7 +20,6 @@ div.content-sidebar{
     right: 0;
     width: calc(100% - $sidebar-width);
     height: 100%;
-    border: 1px solid red;
     &.container-sidebar-entrada{
         animation-name: container_sidebar_entrance;
         animation-direction: normal;

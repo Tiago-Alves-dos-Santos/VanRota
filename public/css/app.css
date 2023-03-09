@@ -153,6 +153,30 @@ div.mysidebar div.links div.sublink div.sublink-links {
   flex-direction: column;
 }
 
+/***********************************************MY NAVBAR*******************************************************/
+
+div.mynavbar {
+  position: relative;
+  width: 100%;
+  background-color: white;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  padding: 10px 5px;
+}
+
+div.mynavbar div.control-sidebar {
+  cursor: pointer;
+}
+
+div.mynavbar div.control-sidebar i {
+  font-size: 30px;
+}
+
+div.mynavbar div.titulo {
+  top: 5px;
+}
+
 /************************************************LAYOUT SIDEBAR**************************************************/
 
 @keyframes container_sidebar_entrance {
@@ -180,7 +204,6 @@ div.content-sidebar {
   right: 0;
   width: calc(100% - 270px);
   height: 100%;
-  border: 1px solid red;
 }
 
 div.content-sidebar.container-sidebar-entrada {

@@ -10,7 +10,6 @@
 body {
   font-family: "Roboto", sans-serif;
   overflow-x: hidden;
-  height: 4450px;
 }
 
 div {
@@ -145,7 +144,6 @@ div.mysidebar div.links div.sublink div.sublink-title span {
 
 div.mysidebar div.links div.sublink div.sublink-title i {
   margin-right: 10px;
-  transform: rotate(90deg);
 }
 
 div.mysidebar div.links div.sublink div.sublink-links {

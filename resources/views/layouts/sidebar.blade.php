@@ -3,7 +3,7 @@
 @include('includes.header')
 <body style="background-color: #F4F3EF" id="layout-sidebar">
     {{-- colocar session do usuario para não ficar passando parametro --}}
-    @include('includes.sidebar', ['tipo' => 'users'])
+    @include('includes.sidebar', ['tipo' => 'user'])
     <div class="content-sidebar" id="content-sidebar">
         @include('includes.myNavBar')
         <div class="content">

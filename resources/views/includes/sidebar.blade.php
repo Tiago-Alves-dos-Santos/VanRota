@@ -17,9 +17,11 @@
             {{ $value["nome"] }}
         </a>
         @endforeach
+        @if (!empty($sublinks))
         <div class="container-divider">
             <div class="divider"></div>
         </div>
+        @endif
         @php
             $old_key = '';
         @endphp

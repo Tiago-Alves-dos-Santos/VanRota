@@ -16,5 +16,5 @@ use Illuminate\Support\Facades\Route;
 
 Route::get('/{tipo?}', [LoginController::class, 'index'])->name('login');
 Route::get('/login/teste', function(){
-    return view('layouts.sidebar');
+    return view('developer.donos');
 });

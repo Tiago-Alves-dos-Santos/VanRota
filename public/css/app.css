@@ -224,6 +224,11 @@ div.content-sidebar.container-sidebar-saida {
   animation-fill-mode: forwards;
 }
 
+div.content-sidebar div.content {
+  width: 100%;
+  padding: 15px 20px;
+}
+
 div#page-login {
   position: absolute;
   display: flex;

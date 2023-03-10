@@ -12,9 +12,10 @@
             </a>
 
             <ul class="dropdown-menu">
-              <li><a class="dropdown-item" href="#">Action</a></li>
-              <li><a class="dropdown-item" href="#">Another action</a></li>
-              <li><a class="dropdown-item" href="#">Something else here</a></li>
+              <li><a class="dropdown-item" href="#">Perfil</a></li>
+              <li><a class="dropdown-item" href="#">Notificações</a></li>
+              {{-- Colocar um modal question aq --}}
+              <li><a class="dropdown-item text-danger" href="#">Sair</a></li>
             </ul>
         </div>
     </div>

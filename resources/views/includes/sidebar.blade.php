@@ -1,3 +1,8 @@
+@php
+    $links = Sidebar::getLinksType($tipo);
+    $sublinks = Sidebar::getSubLinksType($tipo);
+    // dd($sub_links);
+@endphp
 <div class="mysidebar" id="mysidebar-geral" data-show="visivel">
     <div class="titulo">
         <h4>VanRota</h4>
@@ -6,49 +11,40 @@
         <div class="divider"></div>
     </div>
     <div class="links">
-        <a href="">
-            <i class="fa-solid fa-route"></i>
-            Link 1
+        @foreach ($links as $value)
+        <a href="{{ $value["url"] }}">
+            <?=  $value["icone"] ?>
+            {{ $value["nome"] }}
         </a>
-        <a href="">
-            <i class="fa-solid fa-route"></i>
-            Link 1
-        </a>
-        <a href="">
-            <i class="fa-solid fa-route"></i>
-            Link 1
-        </a>
-        <a href="">
-            <i class="fa-solid fa-route"></i>
-            Link 1
-        </a>
+        @endforeach
         <div class="container-divider">
             <div class="divider"></div>
         </div>
+        @php
+            $old_key = '';
+        @endphp
+
+        @forelse ($sublinks as $key => $links )
         <div class="sublink">
             <div class="sublink-title">
-                <span>Titulo</span>
-                <i class="fa-solid fa-square-caret-down"></i>
-            </div>
-            <div class="sublink-links">
-                <a href="">
-                    <i class="fa-solid fa-route"></i>
-                    Link 1
-                </a>
-                <a href="">
-                    <i class="fa-solid fa-route"></i>
-                    Link 1
-                </a>
-                <a href="">
-                    <i class="fa-solid fa-route"></i>
-                    Link 1
-                </a>
-                <a href="">
-                    <i class="fa-solid fa-route"></i>
-                    Link 1
-                </a>
+                <div class="title">
+                    <span style="text-transform: capitalize">{{ $key }}</span>
+                    <i class="fa-solid fa-square-caret-down"></i>
+                </div>
+
+                <div class="sublink-links">
+                    @foreach ($links as $value )
+                    <a href="{{ $value["url"] }}">
+                        <?=  $value["icone"] ?>
+                        {{ $value["nome"] }}
+                    </a>
+                    @endforeach
+                </div>
             </div>
         </div>
+        @empty
+        @endforelse
+
     </div>
 </div>
 

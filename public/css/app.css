@@ -134,6 +134,11 @@ div.mysidebar div.links div.sublink {
 
 div.mysidebar div.links div.sublink div.sublink-title {
   display: flex;
+  flex-direction: column;
+}
+
+div.mysidebar div.links div.sublink div.sublink-title div.title {
+  display: flex;
   justify-content: space-between;
   cursor: pointer;
 }
@@ -146,7 +151,7 @@ div.mysidebar div.links div.sublink div.sublink-title i {
   margin-right: 10px;
 }
 
-div.mysidebar div.links div.sublink div.sublink-links {
+div.mysidebar div.links div.sublink div.sublink-title div.sublink-links {
   margin: 0 10px;
   background-color: #F4F3EF;
   display: flex;

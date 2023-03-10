@@ -91,22 +91,27 @@ div.mysidebar{
             font-size: 22px;
             div.sublink-title{
                 display: flex;
-                justify-content: space-between;
-                cursor: pointer;
+                flex-direction: column;
+                div.title{
+                    display: flex;
+                    justify-content: space-between;
+                    cursor: pointer;
+                }
                 span{
                     margin-left: 10px;
                 }
                 i{
                     margin-right: 10px;
                 }
+                div.sublink-links{
+                    margin: 0 10px;
+                    background-color: #F4F3EF;
+                    display: flex;
+                    flex-direction: column;
+                }
             }
 
-            div.sublink-links{
-                margin: 0 10px;
-                background-color: #F4F3EF;
-                display: flex;
-                flex-direction: column;
-            }
+
         }
     }
 }

@@ -21,6 +21,219 @@ div {
   cursor: pointer;
 }
 
+/***********************************************MYSIDEBAR*******************************************************/
+
+@keyframes sidebar_entrance {
+  0% {
+    left: -270px;
+  }
+
+  100% {
+    left: 0;
+  }
+}
+
+@keyframes sidebar_exit {
+  0% {
+    left: 0;
+  }
+
+  100% {
+    left: -270px;
+  }
+}
+
+div.mysidebar {
+  position: absolute;
+  width: 270px;
+  height: 100%;
+  background-color: white;
+}
+
+div.mysidebar.sidebar-entrada {
+  animation-name: sidebar_entrance;
+  /*nome da animação*/
+  animation-direction: normal;
+  animation-duration: 0.5s;
+  animation-timing-function: ease-in;
+  animation-iteration-count: 1;
+  animation-fill-mode: forwards;
+}
+
+div.mysidebar.sidebar-saida {
+  animation-name: sidebar_exit;
+  /*nome da animação*/
+  animation-direction: normal;
+  animation-duration: 0.5s;
+  animation-timing-function: ease-in;
+  animation-iteration-count: 1;
+  animation-fill-mode: forwards;
+}
+
+div.mysidebar div.container-divider {
+  width: 100%;
+  padding: 0 10px;
+  margin: 5px 0;
+}
+
+div.mysidebar div.container-divider div.divider {
+  width: 100%;
+  height: 2px;
+  background-color: #D1CFCD;
+  padding: 0px 10px;
+}
+
+div.mysidebar div.titulo {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+div.mysidebar div.links {
+  display: flex;
+  flex-direction: column;
+}
+
+div.mysidebar div.links a {
+  position: relative;
+  display: block;
+  width: 100%;
+  text-decoration: none;
+  color: #94918D;
+  font-size: 22px;
+  padding: 10px 10px;
+}
+
+div.mysidebar div.links a:hover {
+  color: #6e6b67;
+}
+
+div.mysidebar div.links a i {
+  margin-right: 10px;
+}
+
+div.mysidebar div.links a.active {
+  color: #EB5E28;
+}
+
+div.mysidebar div.links a.active::after {
+  border-right: 17px solid #f4f3ef;
+  border-top: 17px solid transparent;
+  border-bottom: 17px solid transparent;
+  content: "";
+  display: inline-block;
+  position: absolute;
+  right: -1px;
+  top: 8px;
+}
+
+div.mysidebar div.links div.sublink {
+  font-size: 22px;
+}
+
+div.mysidebar div.links div.sublink div.sublink-title {
+  display: flex;
+  flex-direction: column;
+}
+
+div.mysidebar div.links div.sublink div.sublink-title div.title {
+  display: flex;
+  justify-content: space-between;
+  cursor: pointer;
+}
+
+div.mysidebar div.links div.sublink div.sublink-title span {
+  margin-left: 10px;
+}
+
+div.mysidebar div.links div.sublink div.sublink-title i {
+  margin-right: 10px;
+}
+
+div.mysidebar div.links div.sublink div.sublink-title div.sublink-links {
+  margin: 0 10px;
+  background-color: #F4F3EF;
+  display: flex;
+  flex-direction: column;
+}
+
+/***********************************************MY NAVBAR*******************************************************/
+
+div.mynavbar {
+  position: relative;
+  width: 100%;
+  background-color: white;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  padding: 10px 5px;
+}
+
+div.mynavbar div.control-sidebar {
+  cursor: pointer;
+}
+
+div.mynavbar div.control-sidebar i {
+  font-size: 30px;
+}
+
+div.mynavbar div.titulo {
+  top: 5px;
+}
+
+/************************************************LAYOUT SIDEBAR**************************************************/
+
+@keyframes container_sidebar_entrance {
+  0% {
+    width: 100%;
+  }
+
+  100% {
+    width: calc(100% - 270px);
+  }
+}
+
+@keyframes container_sidebar_exit {
+  0% {
+    width: calc(100% - 270px);
+  }
+
+  100% {
+    width: 100%;
+  }
+}
+
+div.content-sidebar {
+  position: absolute;
+  right: 0;
+  width: calc(100% - 270px);
+  height: 100%;
+}
+
+div.content-sidebar.container-sidebar-entrada {
+  animation-name: container_sidebar_entrance;
+  animation-direction: normal;
+  animation-duration: 0.5s;
+  animation-timing-function: ease-in;
+  animation-iteration-count: 1;
+  animation-fill-mode: forwards;
+}
+
+div.content-sidebar.container-sidebar-saida {
+  animation-name: container_sidebar_exit;
+  animation-direction: normal;
+  animation-duration: 0.5s;
+  animation-timing-function: ease-in;
+  animation-iteration-count: 1;
+  animation-fill-mode: forwards;
+}
+
+div.content-sidebar div.content {
+  width: 100%;
+  padding: 15px 20px;
+}
+
 div#page-login {
   position: absolute;
   display: flex;

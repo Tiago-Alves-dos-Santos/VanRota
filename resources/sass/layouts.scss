@@ -1,0 +1,43 @@
+/************************************************LAYOUT SIDEBAR**************************************************/
+@keyframes container_sidebar_entrance{
+    0%{
+        width: 100%;
+    }
+    100%{
+        width: calc(100% - $sidebar-width);
+    }
+}
+@keyframes container_sidebar_exit{
+    0%{
+        width: calc(100% - $sidebar-width);
+    }
+    100%{
+        width: 100%;
+    }
+}
+div.content-sidebar{
+    position: absolute;
+    right: 0;
+    width: calc(100% - $sidebar-width);
+    height: 100%;
+    &.container-sidebar-entrada{
+        animation-name: container_sidebar_entrance;
+        animation-direction: normal;
+        animation-duration: $sidebar-animation-time;
+        animation-timing-function: ease-in;
+        animation-iteration-count: 1;
+        animation-fill-mode: forwards;
+    }
+    &.container-sidebar-saida{
+        animation-name: container_sidebar_exit;
+        animation-direction: normal;
+        animation-duration: $sidebar-animation-time;
+        animation-timing-function: ease-in;
+        animation-iteration-count: 1;
+        animation-fill-mode: forwards;
+    }
+    div.content{
+        width: 100%;
+        padding: 15px 20px;
+    }
+}

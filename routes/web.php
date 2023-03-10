@@ -15,3 +15,9 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/{tipo?}', [LoginController::class, 'index'])->name('login');
+Route::get('/login/teste', function(){
+    return view('developer.donos');
+})->name('rota_dois');
+Route::get('/login/teste2', function(){
+    return view('developer.dashboard');
+})->name('rota_um');
